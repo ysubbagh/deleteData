@@ -7,6 +7,7 @@ dfplayer = pd.read_csv(PLAYERPATH)
 
 #ALTER players file
 dfplayer.columns = ['Name', 'TeamID', 'ID', 'Season']
+
 grouped = dfplayer.groupby(['Name', 'TeamID', 'ID'])
 dfplayer['Start_Yr'] = grouped['Season'].transform('min')
 dfplayer['End_Yr'] = grouped['Season'].transform('max')
