@@ -10,8 +10,6 @@ dfteam.drop('LEAGUE_ID', inplace=True, axis=1)
 dfteam.drop('ARENACAPACITY', inplace=True, axis=1)
 dfteam.drop('DLEAGUEAFFILIATION', inplace=True, axis=1)
 dfteam.columns = ['ID', 'Min_Yr', 'Max_Yr', 'Abbr', 'Nickname', 'Found_Year', 'City', 'Arena', 'Ownner', 'GM', 'Headcoach']
-dfteam.reset_index(drop=True, inplace=True)
-dfteam['ID'] = range(len(dfteam))
 
 #export out
 dfteam.to_csv(TEAMPATH, index=False)
