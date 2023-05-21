@@ -6,7 +6,8 @@ TEAMPATH = "/Users/yasminesubbagh/Downloads/archive/teams.csv"
 dfteam = pd.read_csv(TEAMPATH)
 
 #ALTER file
-
+#dfteam.drop('LEAGUE_ID', inplace=True, axis=1)
+#dfplayer.columns = ['Name', 'TeamID', 'ID', 'Season']
 
 
 #export out
